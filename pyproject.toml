@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "motadata-apm-custom-instrumentation-python"
+version = "1.0.0"
+description = "Lightweight OpenTelemetry utility for adding safe, prefixed span attributes."
+readme = "README.md"
+license = {text = "Proprietary"}
+requires-python = ">=3.9"
+authors = [
+    {name = "Motadata Engineering Team", email = "engg@motadata.com"},
+]
+keywords = ["opentelemetry", "apm", "instrumentation", "motadata", "observability"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: Other/Proprietary License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: System :: Monitoring",
+]
+dependencies = [
+    "opentelemetry-api==1.38.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/motadata2025/motadata-apm-custom-instrumentation-python"
+Repository = "https://github.com/motadata2025/motadata-apm-custom-instrumentation-python"
+Issues = "https://github.com/motadata2025/motadata-apm-custom-instrumentation-python/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
