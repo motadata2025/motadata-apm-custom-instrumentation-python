@@ -20,15 +20,15 @@ Usage::
     from motadata.apm import CustomInstrumentation
 
     # Scalar attributes examples
-    CustomInstrumentation.set("user.id", 12345)
-    CustomInstrumentation.set("user.name", "john.doe")
-    CustomInstrumentation.set("request.success", True)
+    CustomInstrumentation.set("apm.user.id", 12345)
+    CustomInstrumentation.set("apm.user.name", "john.doe")
+    CustomInstrumentation.set("apm.request.success", True)
 
     # List attributes example
-    CustomInstrumentation.set_str_list("tags", ["api", "production", "critical"])
+    CustomInstrumentation.set_str_list("apm.tags", ["api", "production", "critical"])
 
-All attribute keys are automatically prefixed with ``apm.``
-(e.g. ``apm.user.id``, ``apm.user.name``).
+All attribute keys are automatically prefixed with ``apm.`` when missing. 
+However, for consistency across services, it is recommended to pass the prefixed keys directly.
 """
 
 from .custom_instrumentation import CustomInstrumentation

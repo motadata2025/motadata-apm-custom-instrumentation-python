@@ -48,16 +48,18 @@ Motadata APM Custom Instrumentation helps you attach business context to traces 
 
 ## Installation
 
-Install from PyPI:
+> **Note:** If you are using a virtual environment (e.g., `venv`), ensure it is activated before running the installation command.
+
+Direct installation from repository:
 
 ```bash
-pip install motadata-apm-custom-instrumentation-python
+pip install "git+https://github.com/motadata2025/motadata-apm-custom-instrumentation-python.git@api-based-custom-instrumentation"
 ```
 
-Install from source repository:
+Add to your `requirements.txt`:
 
-```bash
-pip install git+https://github.com/motadata2025/motadata-apm-custom-instrumentation-python.git
+```text
+motadata-apm-custom-instrumentation @ git+https://github.com/motadata2025/motadata-apm-custom-instrumentation-python.git@api-based-custom-instrumentation"
 ```
 
 ---
@@ -112,7 +114,7 @@ except Exception as err:
 - Keys are trimmed, lowercased, and auto-prefixed with `apm.` when missing.
 - Only alphanumeric characters and dots are allowed in keys.
 - Uses OpenTelemetry current span context (`trace.get_current_span()`) for attribute attachment.
-- Scalars must not be `None`.
+- Scalars must not be `None`. Empty string values are ignored.
 - Floats must be finite (no `NaN` or `Infinity`).
 - List methods reject `None`/empty lists.
 - `set_str_list`, `set_int_list`, and `set_bool_list` drop `None` values.
@@ -121,7 +123,7 @@ except Exception as err:
 - Raises `Exception` for invalid input or span retrieval failures.
 
 Key rules: not null/empty, no whitespace, only alphanumeric and dots, lowercased, prefixed `apm.`.
-Value rules: scalar not null, scalar float finite, list not null/empty, and list non-empty after filtering.
+Value rules: scalar not null, scalar string not empty (ignored), scalar float finite, list not null/empty, and list non-empty after filtering.
 
 ---
 
