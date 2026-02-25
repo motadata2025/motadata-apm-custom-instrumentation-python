@@ -2,10 +2,9 @@
 
 [![Python Version](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](https://www.python.org/)
 [![pip Version](https://img.shields.io/badge/pip-20%2B-blue.svg)](https://pip.pypa.io/)
-[![OpenTelemetry](https://img.shields.io/badge/OpenTelemetry-Compatible-brightgreen.svg)](https://opentelemetry.io/)
 [![License](https://img.shields.io/badge/License-Proprietary-red.svg)](LICENSE)
 
-A lightweight, enterprise-grade utility designed to simplify custom instrumentation for Python applications using OpenTelemetry. Built as a seamless extension of Motadata Auto Instrumentation, it ensures that custom attributes can be safely added to auto-generated traces, with validated keys and consistent namespacing.
+A lightweight, enterprise-grade utility designed to simplify custom instrumentation for Python applications using Motadata Instrumentation. Built as a seamless extension of Motadata Auto Instrumentation, it ensures that custom attributes can be safely added to auto-generated traces, with validated keys and consistent namespacing.
 
 ---
 
@@ -28,13 +27,7 @@ A lightweight, enterprise-grade utility designed to simplify custom instrumentat
 
 Motadata APM Custom Instrumentation helps you attach business context to traces while enforcing key validation and consistent naming. Keys are normalized and namespaced automatically, and the API is simple to adopt across services.
 
-> **Prerequisite:** Instrument your app first with **[Motadata Auto Instrumentation](https://docs.motadata.com/motadata-aiops-docs/apm/apm-in-motadata/)** so the OpenTelemetry context is available.
-
-**Use Cases:**
-- Adding business context to distributed traces
-- Enriching spans with application-specific metadata
-- Implementing custom APM attributes and observability markers
-- Standardizing telemetry key naming across microservices
+> **Prerequisite:** Instrument your app first with **[Motadata Auto Instrumentation](https://docs.motadata.com/motadata-aiops-docs/apm/apm-in-motadata/)** so the span context is available.
 
 ---
 
@@ -42,7 +35,7 @@ Motadata APM Custom Instrumentation helps you attach business context to traces 
 
 - Python 3.9+
 - pip 20+
-- Motadata APM agent (auto-instrumented)
+- Motadata Agent (8.1.3+)
 
 ---
 
@@ -142,13 +135,6 @@ Value rules: scalar not null, scalar string not empty (ignored), scalar float fi
 - Issues: GitHub Issues on this repository
 - Documentation: README and inline package docstrings
 
-When reporting issues, include:
-1. Package version (`1.0.0`)
-2. Python version
-3. `opentelemetry-api` version
-4. Full traceback
-5. Minimal reproducible snippet
-
 For contribution inquiries on this proprietary package, contact engg@motadata.com.
 
 ---
@@ -165,4 +151,4 @@ Proprietary software; see [LICENSE](LICENSE) for full terms.
 
 Built by the Motadata Engineering Team.
 
-Powered by [OpenTelemetry](https://opentelemetry.io/).
+Proprietary software; see [LICENSE](LICENSE) for full terms.
