@@ -46,13 +46,13 @@ Motadata APM Custom Instrumentation helps you attach business context to traces 
 Direct installation from repository:
 
 ```bash
-pip install "git+https://github.com/motadata2025/motadata-apm-custom-instrumentation-python.git@api-based-custom-instrumentation"
+pip install "git+https://github.com/motadata2025/motadata-apm-custom-instrumentation-python.git"
 ```
 
 Add to your `requirements.txt`:
 
 ```text
-motadata-apm-custom-instrumentation @ git+https://github.com/motadata2025/motadata-apm-custom-instrumentation-python.git@api-based-custom-instrumentation"
+motadata-apm-custom-instrumentation @ git+https://github.com/motadata2025/motadata-apm-custom-instrumentation-python.git
 ```
 
 ---
